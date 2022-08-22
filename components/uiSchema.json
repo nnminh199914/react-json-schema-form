@@ -1,0 +1,10 @@
+{
+  "position": {
+    "ui:field": "geolocation",
+    "zoom": 7,
+    "defaultLocation": {
+      "lat": 51.50853,
+      "lng": -0.076132
+    }
+  }
+}

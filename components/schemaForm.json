@@ -1,0 +1,66 @@
+{
+  "title": "",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "position": {
+      "type": "object",
+      "title": "1. Map",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": { "type": "number", "title": "Latitude" },
+        "lng": { "type": "number", "title": "Longitude" }
+      }
+    },
+    "Time": {
+      "title": "2. Choose a time range",
+      "description": "Search for weather service, number of measuring stations and measured values.",
+      "type": "object",
+      "properties": {
+        "StartDate": {
+          "type": "string",
+          "format": "date",
+          "title": "Start date"
+        },
+        "EndDate": {
+          "type": "string",
+          "format": "date",
+          "title": "End date"
+        }
+      }
+    },
+    "WeatherStation": {
+      "title": "3. Choose a a weather station",
+      "type": "object",
+      "properties": {
+        "Weather services": {
+          "enum": ["screen", "multiply", "overlay"],
+          "title": "Weather services"
+        },
+        "Search station": {
+          "type": "boolean",
+          "title": "Search station",
+          "default": false
+        },
+        "Number of measuring stations per weather service": {
+          "type": "string",
+          "enum": ["screen", "multiply", "overlay"]
+        }
+      }
+    },
+    "GenerationAlgorithm": {
+      "title": "4. Choose the generation algorithm",
+      "type": "object",
+      "properties": {
+        "Specifying if raw data or interpolated data": {
+          "type": "string",
+          "enum": ["screen", "multiply", "overlay"]
+        },
+        "Measurement data": {
+          "type": "string",
+          "enum": ["screen", "multiply", "overlay"]
+        }
+      }
+    }
+  }
+}
